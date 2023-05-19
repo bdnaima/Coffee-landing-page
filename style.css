@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+/* Navbar */
+.navbar-light .navbar-brand {
+  color: #66301b;
+}
+
+.btn-outline-success {
+  color: #66301b;
+  border-color: #66301b;
+}
+
+.btn-outline-success:hover {
+  color: #f8f9fa;
+  background-color: #66301b;
+  border-color: #66301b;
+}
+
+/* Image jumbotron */
+.background {
+  background-image: url("./assets/coffee.jpg");
+  background-attachment: fixed;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-image {
+  position: relative;
+  margin: 0 auto;
+}
+
+.centered-text {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  color: white;
+  font-size: 5rem;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Cards */
+.container {
+  margin-top: 10rem;
+}
+
+.card {
+  border: none;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+.btn-primary {
+  background-color: #8b4513;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #965a3e;
+  border: none;
+}
+
+/* Cup animation */
+.coffee-box {
+  background-image: url("./assets/beige.jpg");
+  height: 60%;
+  margin-top: 5rem;
+}
+.cup {
+  position: relative;
+  top: 10%;
+  left: 41%;
+  width: 220px;
+  height: 180px;
+  border: 8px solid #66301b;
+  border-radius: 10px 10px 60px 75px;
+  background: url("./assets/coffee_fill.png");
+  background-repeat: repeat-x;
+  background-position: 0 130px;
+  animation: filling 4s infinite;
+}
+
+@keyframes filling {
+  0%,
+  100% {
+    background-position: 0 130px;
+  }
+  50% {
+    background-position: 600px -70px;
+  }
+}
+
+.cup .cup-handle {
+  position: absolute;
+  top: 10px;
+  right: -70px;
+  width: 65px;
+  height: 120px;
+  border: 12px solid #66301b;
+  border-radius: 20px 10px 50px 20px;
+}
+
+.cup .steam {
+  position: absolute;
+  border-radius: 10px 2px;
+  width: 8px;
+  height: 40px;
+  background: #000;
+  animation: steaming 2s infinite;
+}
+
+@keyframes steaming {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0.8px);
+    transform: translateY(-10px);
+  }
+}
+
+.cup .steam:nth-child(1) {
+  top: -70px;
+  left: 65px;
+  height: 30px;
+  background: #8e5a3423;
+  animation-delay: 0.2s;
+}
+
+.cup .steam:nth-child(2) {
+  top: -120px;
+  left: 95px;
+  height: 50px;
+  background: #8e5a3454;
+  animation-delay: 0.6s;
+}
+
+.cup .steam:nth-child(3) {
+  top: -90px;
+  left: 125px;
+  height: 40px;
+  background: #8e5a3433;
+  animation-delay: 1s;
+}
+
+.cup-text {
+  text-align: center;
+  margin-top: 5rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Coffee third section */
+
+.coffee-third-section {
+  background: url("./assets/coffee-chocolate.jpg");
+  height: 80%;
+  margin-top: 10rem;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+.coffee-third-section h1 {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  text-align: right;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Footer */
+.footer {
+  height: 20%;
+  background-color: #351d1d;
+  color: #fff;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 50%;
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+  /* Image jumbotron */
+  .background {
+    height: 50%;
+  }
+  .centered-text {
+    position: unset;
+    background: none;
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  /* Cards */
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Coffee third section */
+  .coffee-third-section {
+    height: 50%;
+  }
+
+  .coffee-third-section h1 {
+    position: unset;
+
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Cup animation */
+
+  .cup-text {
+    font-size: 1.3rem;
+  }
+
+  /* Footer */
+
+  .footer {
+    height: 35%;
+  }
+
+  .contact {
+    flex-direction: column;
+    top: 0;
+    width: 80%;
+    margin: auto;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 912px) {
+  .cup {
+    left: 36%;
+  }
+}
+
+@media (max-width: 820px) {
+  .cup {
+    left: 35%;
+  }
+}
+
+@media (max-width: 600px) {
+  .cup {
+    left: 18%;
+  }
+}
+
+@media (max-width: 540px) {
+  .cup {
+    left: 28%;
+  }
+}
+
+@media (max-width: 400px) {
+  .cup {
+    left: 21%;
+  }
+}
+
+@media (max-width: 360px) {
+  .cup {
+    left: 15%;
+  }
+}
+
+@media (max-width: 280px) {
+  .cup {
+    left: 0%;
+  }
+  .contact {
+    width: 100%;
+  }
+}
